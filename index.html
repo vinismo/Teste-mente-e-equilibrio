@@ -9,27 +9,38 @@
 <body>
     <div class="container">
         <h1>Teste DISC</h1>
-        <form id="disc-test-form">
+        <div id="intro-screen">
+            <p>
+                Bem-vindo ao Teste DISC! O teste DISC é uma ferramenta de avaliação de personalidade que ajuda a identificar o seu perfil de comportamento em quatro categorias: Dominância (D), Influência (I), Estabilidade (S) e Conformidade (C). Antes de começar o teste, leia as instruções abaixo e clique em "Iniciar o Teste".
+            </p>
+            <button id="start-button">Iniciar o Teste</button>
+        </div>
+        <form id="disc-test-form" class="hidden">
             <!-- Perguntas DISC -->
             <div class="question">
                 <p>1. Sou extrovertido e gosto de interagir com outras pessoas.</p>
-                <input type="radio" name="q1" value="D"> Discordo
+                <input type="radio" name="q1" value="D" required> Discordo
                 <input type="radio" name="q1" value="I"> Concordo
             </div>
             <div class="question">
                 <p>2. Prefiro seguir um plano bem definido em vez de improvisar.</p>
-                <input type="radio" name="q2" value="C"> Concordo
+                <input type="radio" name="q2" value="C" required> Concordo
                 <input type="radio" name="q2" value="S"> Discordo
             </div>
             <div class="question">
                 <p>3. Gosto de liderar e tomar decisões.</p>
-                <input type="radio" name="q3" value="D"> Concordo
+                <input type="radio" name="q3" value="D" required> Concordo
                 <input type="radio" name="q3" value="I"> Discordo
             </div>
             <div class="question">
                 <p>4. Prefiro trabalhar em equipe do que sozinho.</p>
-                <input type="radio" name="q4" value="S"> Concordo
+                <input type="radio" name="q4" value="S" required> Concordo
                 <input type="radio" name="q4" value="C"> Discordo
+            </div>
+            <div class="question">
+                <p>5. Gosto de planejar detalhadamente as tarefas que tenho que realizar.</p>
+                <input type="radio" name="q5" value="C" required> Concordo
+                <input type="radio" name="q5" value="D"> Discordo
             </div>
             <!-- Adicione mais perguntas aqui -->
 
@@ -39,34 +50,37 @@
             <h2>Resultado do Teste DISC:</h2>
             <p id="disc-type">Seu tipo DISC é: <span id="disc-result"></span></p>
         </div>
+        <div id="error-message" class="hidden">
+            <p style="color: red;">Por favor, responda todas as perguntas antes de enviar.</p>
+        </div>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            const introScreen = document.getElementById("intro-screen");
             const form = document.getElementById("disc-test-form");
             const resultContainer = document.getElementById("result");
             const discResult = document.getElementById("disc-result");
+            const errorMessage = document.getElementById("error-message");
+            const startButton = document.getElementById("start-button");
             const submitButton = document.getElementById("submit-button");
-    
+
+            startButton.addEventListener("click", function() {
+                introScreen.style.display = "none";
+                form.style.display = "block";
+            });
+
             submitButton.addEventListener("click", function() {
-                const formData = new FormData(form);
-    
-                // Verificar se todos os campos estão preenchidos
-                let allFieldsFilled = true;
-                const questions = ['q1', 'q2', 'q3', 'q4']; // Inclua os nomes dos campos aqui
-                for (const question of questions) {
-                    if (!formData.get(question)) {
-                        allFieldsFilled = false;
-                        break;
-                    }
-                }
-    
-                if (allFieldsFilled) {
+                if (form.checkValidity()) {
+                    errorMessage.style.display = "none"; // Esconder mensagem de erro se estiver visível
+
+                    const formData = new FormData(form);
+
                     let D = 0;
                     let I = 0;
                     let S = 0;
                     let C = 0;
-    
+
                     for (const entry of formData.entries()) {
                         if (entry[1] === "D") {
                             D++;
@@ -78,10 +92,10 @@
                             C++;
                         }
                     }
-    
-                    // Determine o tipo DISC com base nas respostas
+
+                    // Determine the DISC type based on the answers
                     let discType = "";
-    
+
                     if (D > I && D > S && D > C) {
                         discType = "Dominante (D)";
                     } else if (I > D && I > S && I > C) {
@@ -91,17 +105,16 @@
                     } else {
                         discType = "Consciente (C)";
                     }
-    
+
+                    // Esconder o formulário e mostrar o resultado
+                    form.style.display = "none";
                     discResult.textContent = discType;
                     resultContainer.style.display = "block";
                 } else {
-                    // Exibir uma mensagem de erro se algum campo não estiver preenchido
-                    alert("Por favor, preencha todos os campos antes de enviar o formulário.");
+                    errorMessage.style.display = "block"; // Mostrar mensagem de erro se não todas as perguntas estiverem respondidas
                 }
             });
         });
     </script>
-    
-    
 </body>
 </html>
