@@ -1,120 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Teste DISC</title>
+    <title>Teste</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Teste DISC</h1>
-        <div id="intro-screen">
-            <p>
-                Bem-vindo ao Teste DISC! O teste DISC é uma ferramenta de avaliação de personalidade que ajuda a identificar o seu perfil de comportamento em quatro categorias: Dominância (D), Influência (I), Estabilidade (S) e Conformidade (C). Antes de começar o teste, leia as instruções abaixo e clique em "Iniciar o Teste".
-            </p>
-            <button id="start-button">Iniciar o Teste</button>
-        </div>
-        <form id="disc-test-form" class="hidden">
-            <!-- Perguntas DISC -->
-            <div class="question">
-                <p>1. Sou extrovertido e gosto de interagir com outras pessoas.</p>
-                <input type="radio" name="q1" value="D" required> Discordo
-                <input type="radio" name="q1" value="I"> Concordo
-            </div>
-            <div class="question">
-                <p>2. Prefiro seguir um plano bem definido em vez de improvisar.</p>
-                <input type="radio" name="q2" value="C" required> Concordo
-                <input type="radio" name="q2" value="S"> Discordo
-            </div>
-            <div class="question">
-                <p>3. Gosto de liderar e tomar decisões.</p>
-                <input type="radio" name="q3" value="D" required> Concordo
-                <input type="radio" name="q3" value="I"> Discordo
-            </div>
-            <div class="question">
-                <p>4. Prefiro trabalhar em equipe do que sozinho.</p>
-                <input type="radio" name="q4" value="S" required> Concordo
-                <input type="radio" name="q4" value="C"> Discordo
-            </div>
-            <div class="question">
-                <p>5. Gosto de planejar detalhadamente as tarefas que tenho que realizar.</p>
-                <input type="radio" name="q5" value="C" required> Concordo
-                <input type="radio" name="q5" value="D"> Discordo
-            </div>
-            <!-- Adicione mais perguntas aqui -->
+    <div id="tela01">
+        <h1>Teste Autoconhecimento</h1>
+        <p>
+            Parabéns pela iniciativa! Venha nessa jornada de autoconhecimento e processo de melhoria para autoperformance.
+        </p>
+        <p>
+            Responda as questões abaixo de forma sincera e considerando o período atual em até 2 meses antecedentes.
+        </p>
+        <p>
+            Considere a pontuação de 0 a 5. Quanto MAIOR a pontuação, mais você entende que aquela afirmação representa seu estado atual e real.
+        </p>
+        <button onclick="mostrarTela('tela02')">Iniciar o Teste</button>
+    </div>
 
-            <button type="button" id="submit-button">Enviar</button>
-        </form>
-        <div id="result" class="hidden">
-            <h2>Resultado do Teste DISC:</h2>
-            <p id="disc-type">Seu tipo DISC é: <span id="disc-result"></span></p>
+    <div id="tela02" class="hidden">
+        <div class="question-cinza">
+            <p>1. Tenho dificuldade de dormir e ter uma noite inteira de sono profundo.</p>
+            <input type="radio" name="q1" value="0" required> 0
+            <input type="radio" name="q1" value="1"> 1 
+            <input type="radio" name="q1" value="2"> 2 
+            <input type="radio" name="q1" value="3"> 3 
+            <input type="radio" name="q1" value="4"> 4 
+            <input type="radio" name="q1" value="5"> 5 
         </div>
-        <div id="error-message" class="hidden">
-            <p style="color: red;">Por favor, responda todas as perguntas antes de enviar.</p>
+        <button onclick="mostrarTela('tela03')">Próxima página</button>
+    </div>
+
+    <div id="tela03" class="hidden">
+        <div class="question-rosa">
+            <p>2. Tenho enxaqueca com frequência.</p>
+            <input type="radio" name="q2" value="0" required> 0
+            <input type="radio" name="q2" value="1"> 1
+            <input type="radio" name="q2" value="2"> 2
+            <input type="radio" name="q2" value="3"> 3
+            <input type="radio" name="q2" value="4"> 4
+            <input type="radio" name="q2" value="5"> 5
         </div>
+        <button onclick="mostrarTela('tela04')">Próxima página</button>
+    </div>
+
+    <div id="tela04" class="hidden">
+        <div class="question-verde">
+            <p>3. Costumo perder o foco no que estou fazendo, quando a atividade é de leitura ou observação.</p>
+            <input type="radio" name="q3" value="0" required> 0
+            <input type="radio" name="q3" value="1"> 1
+            <input type="radio" name="q3" value="2"> 2
+            <input type="radio" name="q3" value="3"> 3
+            <input type="radio" name="q3" value="4"> 4
+            <input type="radio" name="q3" value="5"> 5
+        </div>
+        <button onclick="calcularResultado()">Finalizar teste</button>
+    </div>
+
+    <div id="tela05" class="hidden">
+        <h2>Resultados (somar pontos das respostas):</h2>
+        <p>Cinza: <span id="pontuacaoCinza">0 pontos</span></p>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const introScreen = document.getElementById("intro-screen");
-            const form = document.getElementById("disc-test-form");
-            const resultContainer = document.getElementById("result");
-            const discResult = document.getElementById("disc-result");
-            const errorMessage = document.getElementById("error-message");
-            const startButton = document.getElementById("start-button");
-            const submitButton = document.getElementById("submit-button");
+        let respostas = {
+            cinza: 0
+        };
 
-            startButton.addEventListener("click", function() {
-                introScreen.style.display = "none";
-                form.style.display = "block";
-            });
+        function mostrarTela(tela) {
+            document.getElementById('tela01').style.display = 'none';
+            document.getElementById('tela02').style.display = 'none';
+            document.getElementById('tela03').style.display = 'none';
+            document.getElementById('tela04').style.display = 'none';
+            document.getElementById('tela05').style.display = 'none';
 
-            submitButton.addEventListener("click", function() {
-                if (form.checkValidity()) {
-                    errorMessage.style.display = "none"; // Esconder mensagem de erro se estiver visível
+            document.getElementById(tela).style.display = 'block';
+        }
 
-                    const formData = new FormData(form);
+        function calcularResultado() {
+            // Calcule os resultados com base nas respostas e armazene em respostas
+            for (let i = 1; i <= 3; i++) {
+                let pontuacao = parseInt(document.querySelector(`input[name=q${i}]:checked`).value);
+                respostas.cinza += pontuacao;
+            }
 
-                    let D = 0;
-                    let I = 0;
-                    let S = 0;
-                    let C = 0;
+            // Exibindo os resultados na tela
+            document.getElementById('pontuacaoCinza').textContent = respostas.cinza + ' pontos';
 
-                    for (const entry of formData.entries()) {
-                        if (entry[1] === "D") {
-                            D++;
-                        } else if (entry[1] === "I") {
-                            I++;
-                        } else if (entry[1] === "S") {
-                            S++;
-                        } else if (entry[1] === "C") {
-                            C++;
-                        }
-                    }
+            mostrarTela('tela05');
+        }
 
-                    // Determine the DISC type based on the answers
-                    let discType = "";
-
-                    if (D > I && D > S && D > C) {
-                        discType = "Dominante (D)";
-                    } else if (I > D && I > S && I > C) {
-                        discType = "Influente (I)";
-                    } else if (S > D && S > I && S > C) {
-                        discType = "Estável (S)";
-                    } else {
-                        discType = "Consciente (C)";
-                    }
-
-                    // Esconder o formulário e mostrar o resultado
-                    form.style.display = "none";
-                    discResult.textContent = discType;
-                    resultContainer.style.display = "block";
-                } else {
-                    errorMessage.style.display = "block"; // Mostrar mensagem de erro se não todas as perguntas estiverem respondidas
-                }
-            });
-        });
+        mostrarTela('tela01');
     </script>
 </body>
 </html>
