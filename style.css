@@ -1,72 +1,83 @@
+/* Estilo para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    background-color: #fff;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: large;
 }
 
-h1 {
-    color: #007bff;
-    font-size: 24px;
+/* Estilo para o título "Teste" */
+h2 {
+    color: #333;
 }
 
-.question {
-    margin-bottom: 20px;
+/* Estilo para o parágrafo de introdução */
+p {
+    color: #666;
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #fff;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os rótulos das afirmações */
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-top: 10px;
     text-align: left;
 }
 
-.question p {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+/* Estilo para os botões de opção */
+input[type="radio"] {
+    text-align: left;
+    margin-left: 25px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
-input[type="radio"] {
-    margin-right: 10px;
-}
-
+/* Estilo para o botão "Calcular Pontuação" */
 button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
     border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: large;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-#result {
+/* Estilos para os resultados das pontuações */
+#resultadoCinza,
+#resultadoRosa,
+#resultadoVerde,
+#resultadoAmarelo,
+#resultadoAzul,
+#resultadoSemCor {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    display: none;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-#disc-type {
-    font-size: 20px;
-    color: #007bff;
-    margin-top: 10px;
-}
+/* Estilos para as diferentes categorias de resultados */
 
-.hidden {
-    display: none;
-}
