@@ -1,0 +1,305 @@
+
+//tela 01
+Título: Teste 
+<h1>Teste Autoconhecimento</h1>
+<p>
+    Parabéns pela iniciativa! Venha nessa jornada de autoconhecimento e processo de melhoria para autoperformace.
+</p>
+<p>
+    Responda as questões abaixo de forma sincera e considerando o período atual em até 2 meses antecedentes.
+</p>
+<p>
+    Considere e pontuação de 0 a 5. Sendo que quanto MAIOR a pontuação mais entende que aquela afirmação representa seu estado atual e real.
+</p>
+<button>Iniciar o Teste</button>
+
+
+//tela 02
+<div class="cinza">
+    <p>1. Tenho dificuldade de dormir e ter uma noite inteira de sono profundo.</p>
+    <input type="radio" name="q1" value="A" required> 0
+    <input type="radio" name="q1" value="B"> 1 
+    <input type="radio" name="q1" value="C"> 2 
+    <input type="radio" name="q1" value="D"> 3 
+    <input type="radio" name="q1" value="E"> 4 
+    <input type="radio" name="q1" value="F"> 5 
+</div> 
+<div class="rosa">
+    <p>2. Tenho enxaqueca com frequência.</p>
+    <input type="radio" name="q2" value="A" required> 0
+    <input type="radio" name="q2" value="B"> 1
+    <input type="radio" name="q2" value="C"> 2
+    <input type="radio" name="q2" value="D"> 3
+    <input type="radio" name="q2" value="E"> 4
+    <input type="radio" name="q2" value="F"> 5
+</div>
+<div class="cinza">
+    <p>3. Range os dentes dormindo / tem bruxismo.</p>
+    <input type="radio" name="q3" value="A" required> 0
+    <input type="radio" name="q3" value="B"> 1
+    <input type="radio" name="q3" value="C"> 2
+    <input type="radio" name="q3" value="D"> 3
+    <input type="radio" name="q3" value="E"> 4
+    <input type="radio" name="q3" value="F"> 5
+</div>
+<div class="cinza">
+    <p>4. Tem pesadelos ou terror noturno.</p>
+    <input type="radio" name="q4" value="A" required> 0
+    <input type="radio" name="q4" value="B"> 1
+    <input type="radio" name="q4" value="C"> 2
+    <input type="radio" name="q4" value="D"> 3
+    <input type="radio" name="q4" value="E"> 4
+    <input type="radio" name="q4" value="F"> 5
+</div>
+<div class="azul">
+    <p>5. Costumo perder o foco no que estou fazendo, quando a atividade é de leitura ou observação.</p>
+    <input type="radio" name="q5" value="A" required> 0
+    <input type="radio" name="q5" value="B"> 1
+    <input type="radio" name="q5" value="C"> 2
+    <input type="radio" name="q5" value="D"> 3
+    <input type="radio" name="q5" value="E"> 4
+    <input type="radio" name="q5" value="F"> 5
+</div>
+<div class="azul">
+    <p>6. Com frequência esqueço nomes de pessoas ou acontecimentos recentes.</p>
+    <input type="radio" name="q6" value="A" required> 0
+    <input type="radio" name="q6" value="B"> 1
+    <input type="radio" name="q6" value="C"> 2
+    <input type="radio" name="q6" value="D"> 3
+    <input type="radio" name="q6" value="E"> 4
+    <input type="radio" name="q6" value="F"> 5
+</div>
+<div class="verde">
+    <p>7. Cansa-se facilmente.</p>
+    <input type="radio" name="q7" value="A" required> 0
+    <input type="radio" name="q7" value="B"> 1
+    <input type="radio" name="q7" value="C"> 2
+    <input type="radio" name="q7" value="D"> 3
+    <input type="radio" name="q7" value="E"> 4
+    <input type="radio" name="q7" value="F"> 5
+</div>
+<div class="verde">
+    <p>8. Retira-se ou evita pessoas</p>
+    <input type="radio" name="q8" value="A" required> 0
+    <input type="radio" name="q8" value="B"> 1
+    <input type="radio" name="q8" value="C"> 2
+    <input type="radio" name="q8" value="D"> 3
+    <input type="radio" name="q8" value="E"> 4
+    <input type="radio" name="q8" value="F"> 5
+</div>
+<div class="azul">
+    <p>9. Trabalha lentamente para certificar-se de que as coisas estão certas.</p>
+    <input type="radio" name="q9" value="A" required> 0
+    <input type="radio" name="q9" value="B"> 1
+    <input type="radio" name="q9" value="C"> 2
+    <input type="radio" name="q9" value="D"> 3
+    <input type="radio" name="q9" value="E"> 4
+    <input type="radio" name="q9" value="F"> 5
+</div>
+<div class="semcor">
+    <p>10. Viaja nos pensamentos enquanto trabalha ou estuda</p>
+    <input type="radio" name="q10" value="A" required> 0
+    <input type="radio" name="q10" value="B"> 1
+    <input type="radio" name="q10" value="C"> 2
+    <input type="radio" name="q10" value="D"> 3
+    <input type="radio" name="q10" value="E"> 4
+    <input type="radio" name="q10" value="F"> 5
+</div>
+<button>Próxima página</button>
+
+
+//tela 03
+<div class="semcor">
+    <p>11. Tem dificuldade para começar tarefas atribuídas</p>
+    <input type="radio" name="q11" value="A" required> 0
+    <input type="radio" name="q11" value="B"> 1
+    <input type="radio" name="q11" value="C"> 2
+    <input type="radio" name="q11" value="D"> 3
+    <input type="radio" name="q11" value="E"> 4
+    <input type="radio" name="q11" value="F"> 5
+</div>
+<div class="amarelo">
+    <p>12. Sente-se no limite.</p>
+    <input type="radio" name="q12" value="A" required> 0
+    <input type="radio" name="q12" value="B"> 1
+    <input type="radio" name="q12" value="C"> 2
+    <input type="radio" name="q12" value="D"> 3
+    <input type="radio" name="q12" value="E"> 4
+    <input type="radio" name="q12" value="F"> 5
+</div>
+<div class="amarelo">
+    <p>13. Vê-se como incapaz de lidar com situações.</p>
+    <input type="radio" name="q13" value="A" required> 0
+    <input type="radio" name="q13" value="B"> 1
+    <input type="radio" name="q13" value="C"> 2
+    <input type="radio" name="q13" value="D"> 3
+    <input type="radio" name="q13" value="E"> 4
+    <input type="radio" name="q13" value="F"> 5
+</div>
+<div class="azul">
+    <p>14. Minha concentração é a melhor dos últimos anos e consigo manter a atenção plena por um tempo maior.</p>
+    <input type="radio" name="q14" value="A" required> 0
+    <input type="radio" name="q14" value="B"> 1
+    <input type="radio" name="q14" value="C"> 2
+    <input type="radio" name="q14" value="D"> 3
+    <input type="radio" name="q14" value="E"> 4
+    <input type="radio" name="q14" value="F"> 5
+</div>
+<div class="azul">
+    <p>15. Quando realizo algum calculo matemático, com frequência não consigo manter a atenção e me distraio, não conseguindo terminar a atividade.</p>
+    <input type="radio" name="q15" value="A" required> 0
+    <input type="radio" name="q15" value="B"> 1
+    <input type="radio" name="q15" value="C"> 2
+    <input type="radio" name="q15" value="D"> 3
+    <input type="radio" name="q15" value="E"> 4
+    <input type="radio" name="q15" value="F"> 5
+</div>
+<div class="rosa">
+    <p>16. Não gosta de ser tocado ou segurado.</p>
+    <input type="radio" name="q16" value="A" required> 0
+    <input type="radio" name="q16" value="B"> 1
+    <input type="radio" name="q16" value="C"> 2
+    <input type="radio" name="q16" value="D"> 3
+    <input type="radio" name="q16" value="E"> 4
+    <input type="radio" name="q16" value="F"> 5
+</div>
+<div class="cinza">
+    <p>17. Acorda várias vezes a noite.</p>
+    <input type="radio" name="q17" value="A" required> 0
+    <input type="radio" name="q17" value="B"> 1
+    <input type="radio" name="q17" value="C"> 2
+    <input type="radio" name="q17" value="D"> 3
+    <input type="radio" name="q17" value="E"> 4
+    <input type="radio" name="q17" value="F"> 5
+</div>
+<div class="cinza">
+    <p>18. Tem dificuldade para acordar ou acorda cansado.</p>
+    <input type="radio" name="q18" value="A" required> 0
+    <input type="radio" name="q18" value="B"> 1
+    <input type="radio" name="q18" value="C"> 2
+    <input type="radio" name="q18" value="D"> 3
+    <input type="radio" name="q18" value="E"> 4
+    <input type="radio" name="q18" value="F"> 5
+</div>
+<div class="verde">
+    <p>19. Tem resposta emocional neutra para eventos positivos.</p>
+    <input type="radio" name="q19" value="A" required> 0
+    <input type="radio" name="q19" value="B"> 1
+    <input type="radio" name="q19" value="C"> 2
+    <input type="radio" name="q19" value="D"> 3
+    <input type="radio" name="q19" value="E"> 4
+    <input type="radio" name="q19" value="F"> 5
+</div>
+<div class="semcor">
+    <p>20. Faz as tarefas correndo, comete erros tolos.</p>
+    <input type="radio" name="q20" value="A" required> 0
+    <input type="radio" name="q20" value="B"> 1
+    <input type="radio" name="q20" value="C"> 2
+    <input type="radio" name="q20" value="D"> 3
+    <input type="radio" name="q20" value="E"> 4
+    <input type="radio" name="q20" value="F"> 5
+</div>
+<button>Próxima página</button>
+
+
+//tela 04
+<div class="rosa">
+    <p>21. Tem dificuldade em estabelecer e manter relacionamentos.</p>
+    <input type="radio" name="q21" value="A" required> 0
+    <input type="radio" name="q21" value="B"> 1
+    <input type="radio" name="q21" value="C"> 2
+    <input type="radio" name="q21" value="D"> 3
+    <input type="radio" name="q21" value="E"> 4
+    <input type="radio" name="q21" value="F"> 5
+</div>
+<div class="rosa">
+    <p>22. Tem dificuldade de sentir as emoções dos outros.</p>
+    <input type="radio" name="q22" value="A" required> 0
+    <input type="radio" name="q22" value="B"> 1
+    <input type="radio" name="q22" value="C"> 2
+    <input type="radio" name="q22" value="D"> 3
+    <input type="radio" name="q22" value="E"> 4
+    <input type="radio" name="q22" value="F"> 5
+</div>
+<div class="rosa">
+    <p>23. Tem dificuldade para aceitar autoridade.</p>
+    <input type="radio" name="q23" value="A" required> 0
+    <input type="radio" name="q23" value="B"> 1
+    <input type="radio" name="q23" value="C"> 2
+    <input type="radio" name="q23" value="D"> 3
+    <input type="radio" name="q23" value="E"> 4
+    <input type="radio" name="q23" value="F"> 5
+</div>
+<div class="amarelo">
+    <p>24. Frequentemente preocupado, ansioso.</p>
+    <input type="radio" name="q24" value="A" required> 0
+    <input type="radio" name="q24" value="B"> 1
+    <input type="radio" name="q24" value="C"> 2
+    <input type="radio" name="q24" value="D"> 3
+    <input type="radio" name="q24" value="E"> 4
+    <input type="radio" name="q24" value="F"> 5
+</div>
+<div class="verde">
+    <p>25. Seu nível de energia é baixo.</p>
+    <input type="radio" name="q25" value="A" required> 0
+    <input type="radio" name="q25" value="B"> 1
+    <input type="radio" name="q25" value="C"> 2
+    <input type="radio" name="q25" value="D"> 3
+    <input type="radio" name="q25" value="E"> 4
+    <input type="radio" name="q25" value="F"> 5
+</div>
+<div class="verde">
+    <p>26. Chora facilmente.</p>
+    <input type="radio" name="q26" value="A" required> 0
+    <input type="radio" name="q26" value="B"> 1
+    <input type="radio" name="q26" value="C"> 2
+    <input type="radio" name="q26" value="D"> 3
+    <input type="radio" name="q26" value="E"> 4
+    <input type="radio" name="q26" value="F"> 5
+</div>
+<div class="semcor">
+    <p>27. Comete erros matemáticos por descuido.</p>
+    <input type="radio" name="q27" value="A" required> 0
+    <input type="radio" name="q27" value="B"> 1
+    <input type="radio" name="q27" value="C"> 2
+    <input type="radio" name="q27" value="D"> 3
+    <input type="radio" name="q27" value="E"> 4
+    <input type="radio" name="q27" value="F"> 5
+</div>
+<div class="semcor">
+    <p>28. Perde o assunto durante uma conversa ou escrita</p>
+    <input type="radio" name="q28" value="A" required> 0
+    <input type="radio" name="q28" value="B"> 1
+    <input type="radio" name="q28" value="C"> 2
+    <input type="radio" name="q28" value="D"> 3
+    <input type="radio" name="q28" value="E"> 4
+    <input type="radio" name="q28" value="F"> 5
+</div>
+<div class="amarelo">
+    <p>29. Ansiedade relativamente constante.</p>
+    <input type="radio" name="q29" value="A" required> 0
+    <input type="radio" name="q29" value="B"> 1
+    <input type="radio" name="q29" value="C"> 2
+    <input type="radio" name="q29" value="D"> 3
+    <input type="radio" name="q29" value="E"> 4
+    <input type="radio" name="q29" value="F"> 5
+</div>
+<div class="amarelo">
+    <p>30. Julga-se negativamente.</p>
+    <input type="radio" name="q30" value="A" required> 0
+    <input type="radio" name="q30" value="B"> 1
+    <input type="radio" name="q30" value="C"> 2
+    <input type="radio" name="q30" value="D"> 3
+    <input type="radio" name="q30" value="E"> 4
+    <input type="radio" name="q30" value="F"> 5
+</div>
+<button>Finalizar teste</button>
+
+//tela 05
+Resultados (somar pontos das respostas): 
+Amarelo: 0 pontos
+Semcor: 0 pontos
+Verde: 0 pontos
+Azul: 0 pontos
+Rosa: 0 pontos
+cinza: 0 pontos
