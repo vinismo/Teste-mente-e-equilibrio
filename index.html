@@ -2,100 +2,470 @@
 <html>
 <head>
     <title>Teste</title>
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id="tela01">
-        <h1>Teste Autoconhecimento</h1>
-        <p>
-            Parabéns pela iniciativa! Venha nessa jornada de autoconhecimento e processo de melhoria para autoperformance.
-        </p>
-        <p>
-            Responda as questões abaixo de forma sincera e considerando o período atual em até 2 meses antecedentes.
-        </p>
-        <p>
-            Considere a pontuação de 0 a 5. Quanto MAIOR a pontuação, mais você entende que aquela afirmação representa seu estado atual e real.
-        </p>
-        <button onclick="mostrarTela('tela02')">Iniciar o Teste</button>
-    </div>
+    <h1>Nome Teste </h1>
+    <p>Parabéns pela iniciativa! Venha nessa jornada de autoconhecimento e processo de melhoria para autoperformace.</p>
 
-    <div id="tela02" class="hidden">
-        <div class="question-cinza">
-            <p>1. Tenho dificuldade de dormir e ter uma noite inteira de sono profundo.</p>
-            <input type="radio" name="q1" value="0" required> 0
-            <input type="radio" name="q1" value="1"> 1 
-            <input type="radio" name="q1" value="2"> 2 
-            <input type="radio" name="q1" value="3"> 3 
-            <input type="radio" name="q1" value="4"> 4 
-            <input type="radio" name="q1" value="5"> 5 
-        </div>
-        <button onclick="mostrarTela('tela03')">Próxima página</button>
-    </div>
+    <p>Responda as questões abaixo de forma sincera e considerando o período atual em até 2 meses antecedentes. </p>
 
-    <div id="tela03" class="hidden">
-        <div class="question-rosa">
-            <p>2. Tenho enxaqueca com frequência.</p>
-            <input type="radio" name="q2" value="0" required> 0
-            <input type="radio" name="q2" value="1"> 1
-            <input type="radio" name="q2" value="2"> 2
-            <input type="radio" name="q2" value="3"> 3
-            <input type="radio" name="q2" value="4"> 4
-            <input type="radio" name="q2" value="5"> 5
-        </div>
-        <button onclick="mostrarTela('tela04')">Próxima página</button>
-    </div>
+    <p>Considere a pontuação de 0 a 5. Sendo que quanto MAIOR a pontuação mais entende que aquela afirmação representa seu estado atual e real.</p>
+    <br>
+    <form id="testeForm">
+        <label for="afirmacao1">1 - Tenho dificuldade de dormir e ter uma noite inteira de sono profundo: </label>
+        <br>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="0" required> 0 </label>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="1"> 1 </label>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="2"> 2 </label>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="3"> 3 </label>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="4"> 4 </label>
+        <label htmlFor="afirmacao1"><input type="radio" id="afirmacao1" name="afirmacao1" value="5"> 5 </label>       
+        <br>
+        <br>
 
-    <div id="tela04" class="hidden">
-        <div class="question-verde">
-            <p>3. Costumo perder o foco no que estou fazendo, quando a atividade é de leitura ou observação.</p>
-            <input type="radio" name="q3" value="0" required> 0
-            <input type="radio" name="q3" value="1"> 1
-            <input type="radio" name="q3" value="2"> 2
-            <input type="radio" name="q3" value="3"> 3
-            <input type="radio" name="q3" value="4"> 4
-            <input type="radio" name="q3" value="5"> 5
-        </div>
-        <button onclick="calcularResultado()">Finalizar teste</button>
-    </div>
+        <label for="afirmacao2">2 - Tenho enxaqueca com frequência. </label>
+        <br>
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="0" required> 0 </label>  
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="1"> 1 </label>  
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="2"> 2 </label>  
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="3"> 3 </label>  
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="4"> 4 </label>  
+        <label htmlFor="afirmacao2"><input type="radio" id="afirmacao2" name="afirmacao2" value="5"> 5 </label>  
+        <br>
+        <br>
 
-    <div id="tela05" class="hidden">
-        <h2>Resultados (somar pontos das respostas):</h2>
-        <p>Cinza: <span id="pontuacaoCinza">0 pontos</span></p>
-    </div>
+        <label for="afirmacao3">3 - Range os dentes dormindo / tem bruxismo: </label>
+        <br>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="0" required> 0 </label>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="1"> 1 </label>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="2"> 2 </label>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="3"> 3 </label>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="4"> 4 </label>
+        <label htmlFor="afirmacao3"><input type="radio" id="afirmacao3" name="afirmacao3" value="5"> 5 </label>
+        <br>
+        <br>
+
+        <label for="afirmacao4">4 - Tem pesadelos ou terror noturno: </label>
+        <br>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="0" required> 0</label>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="1"> 1</label>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="2"> 2</label>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="3"> 3</label>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="4"> 4</label>
+        <label htmlFor="afirmacao4"><input type="radio" id="afirmacao4" name="afirmacao4" value="5"> 5</label>
+        <br>
+        <br>
+
+        <label for="afirmacao5">5 - Costumo perder o foco no que estou fazendo, quando a atividade é de leitura ou observação: </label>
+        <br>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="0" required> 0 </label>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="1"> 1 </label>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="2"> 2 </label>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="3"> 3 </label>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="4"> 4 </label>
+        <label htmlFor="afirmacao5"><input type="radio" id="afirmacao5" name="afirmacao5" value="5"> 5 </label>
+        <br>
+        <br>
+
+        <label for="afirmacao6">6 - Com frequência esqueço nomes de pessoas ou acontecimentos recentes: </label>
+        <br>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="0" required> 0 </label>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="1"> 1 </label>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="2"> 2 </label>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="3"> 3 </label>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="4"> 4 </label>
+        <label htmlFor="afirmacao6"><input type="radio" id="afirmacao6" name="afirmacao6" value="5"> 5 </label>
+        <br>
+        <br>
+
+        <label for="afirmacao7">7 - Cansa-se facilmente: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="0" required> 0 </label>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="1"> 1 </label>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="2"> 2 </label>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="3"> 3 </label>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="4"> 4 </label>
+        <label htmlFor="afirmacao7"><input type="radio" id="afirmacao7" name="afirmacao7" value="5"> 5 </label>
+        <br>
+        <br>
+
+        <label for="afirmacao8">8 - Retira-se ou evita pessoas: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao8" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao9">9 - Trabalha lentamente para certificar-se de que as coisas estão certas: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao9" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao10">10 - Viaja nos pensamentos enquanto trabalha ou estuda: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao10" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao11">11 - Tem dificuldade para começar tarefas atribuídas: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao11" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao12">12 - Sente-se no limite: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao12" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao13">13 - Vê-se como incapaz de lidar com situações: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao13" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao14">14 - Minha concentração é a melhor dos últimos anos e consigo manter a atenção plena por um tempo maior: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao14" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao15">15 - Quando realizo algum calculo matemático, com frequência não consigo manter a atenção e me distraio, não conseguindo terminar a atividade: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao15" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao16">16 - Não gosta de ser tocado ou segurado: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao16" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao17">17 - Acorda várias vezes a noite: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao17" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao18">18 - Tem dificuldade para acordar ou acorda cansado: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao18" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao19">19 - Tem resposta emocional neutra para eventos positivos: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao19" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao20">20 - Faz as tarefas correndo, comete erros tolos: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao20" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao21">21 - Tem dificuldade em estabelecer e manter relacionamentos: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao21" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao22">22 - Tem dificuldade de sentir as emoções dos outros: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao22" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao23">23 - Tem dificuldade para aceitar autoridade: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao23" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao24">24 - Frequentemente preocupado, ansioso: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao24" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao25">25 - Seu nível de energia é baixo: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao25" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao26">26 - Chora facilmente: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao26" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao27">27 - Comete erros matemáticos por descuido: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao27" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao28">28 - Perde o assunto durante uma conversa ou escrita: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao28" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao29">29 - Ansiedade relativamente constante: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao29" value="5"> 5        
+        <br>
+        <br>
+
+        <label for="afirmacao30">30 - Julga-se negativamente: </label>
+        <br>
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="0" required> 0
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="1"> 1
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="2"> 2
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="3"> 3
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="4"> 4
+        <label htmlFor="afirmacao7"><input type="radio" name="afirmacao30" value="5"> 5        
+        <br>
+        <br>
+
+
+        <button type="button" onclick="calcularPontuacao()">Calcular Pontuação</button>
+
+    </form>
+
+    <h2>Resultados</h2>
+    <p id="resultadoCinza"></p>
+    <p id="resultadoRosa"></p>
+    <p id="resultadoVerde"></p>
+    <p id="resultadoAmarelo"></p>
+    <p id="resultadoAzul"></p>
+    <p id="resultadoSemCor"></p>
+
 
     <script>
-        let respostas = {
-            cinza: 0
-        };
+        function calcularPontuacao() {
+            var afirmacao1 = parseInt(document.querySelector('input[name="afirmacao1"]:checked').value);
+            var afirmacao2 = parseInt(document.querySelector('input[name="afirmacao2"]:checked').value);
+            var afirmacao3 = parseInt(document.querySelector('input[name="afirmacao3"]:checked').value);
+            var afirmacao4 = parseInt(document.querySelector('input[name="afirmacao4"]:checked').value);
+            var afirmacao5 = parseInt(document.querySelector('input[name="afirmacao5"]:checked').value);
+            var afirmacao6 = parseInt(document.querySelector('input[name="afirmacao6"]:checked').value);
+            var afirmacao7 = parseInt(document.querySelector('input[name="afirmacao7"]:checked').value);
+            var afirmacao8 = parseInt(document.querySelector('input[name="afirmacao8"]:checked').value);
+            var afirmacao9 = parseInt(document.querySelector('input[name="afirmacao9"]:checked').value);
+            var afirmacao10 = parseInt(document.querySelector('input[name="afirmacao10"]:checked').value);
+            var afirmacao11 = parseInt(document.querySelector('input[name="afirmacao11"]:checked').value);
+            var afirmacao12 = parseInt(document.querySelector('input[name="afirmacao12"]:checked').value);
+            var afirmacao13 = parseInt(document.querySelector('input[name="afirmacao13"]:checked').value);
+            var afirmacao14 = parseInt(document.querySelector('input[name="afirmacao14"]:checked').value);
+            var afirmacao15 = parseInt(document.querySelector('input[name="afirmacao15"]:checked').value);
+            var afirmacao16 = parseInt(document.querySelector('input[name="afirmacao16"]:checked').value);
+            var afirmacao17 = parseInt(document.querySelector('input[name="afirmacao17"]:checked').value);
+            var afirmacao18 = parseInt(document.querySelector('input[name="afirmacao18"]:checked').value);
+            var afirmacao19 = parseInt(document.querySelector('input[name="afirmacao19"]:checked').value);
+            var afirmacao20 = parseInt(document.querySelector('input[name="afirmacao20"]:checked').value);
+            var afirmacao21 = parseInt(document.querySelector('input[name="afirmacao21"]:checked').value);
+            var afirmacao22 = parseInt(document.querySelector('input[name="afirmacao22"]:checked').value);
+            var afirmacao23 = parseInt(document.querySelector('input[name="afirmacao23"]:checked').value);
+            var afirmacao24 = parseInt(document.querySelector('input[name="afirmacao24"]:checked').value);
+            var afirmacao25 = parseInt(document.querySelector('input[name="afirmacao25"]:checked').value);
+            var afirmacao26 = parseInt(document.querySelector('input[name="afirmacao26"]:checked').value);
+            var afirmacao27 = parseInt(document.querySelector('input[name="afirmacao27"]:checked').value);
+            var afirmacao28 = parseInt(document.querySelector('input[name="afirmacao28"]:checked').value);
+            var afirmacao29 = parseInt(document.querySelector('input[name="afirmacao29"]:checked').value);
+            var afirmacao30 = parseInt(document.querySelector('input[name="afirmacao30"]:checked').value);
 
-        function mostrarTela(tela) {
-            document.getElementById('tela01').style.display = 'none';
-            document.getElementById('tela02').style.display = 'none';
-            document.getElementById('tela03').style.display = 'none';
-            document.getElementById('tela04').style.display = 'none';
-            document.getElementById('tela05').style.display = 'none';
 
-            document.getElementById(tela).style.display = 'block';
-        }
+            var pontuacaoCinza = afirmacao1 + afirmacao3 + afirmacao4 + afirmacao17 + afirmacao18;
+            var pontuacaoRosa = afirmacao2 + afirmacao16 + afirmacao21 + afirmacao22 + afirmacao23;
+            var pontuacaoVerde = afirmacao7 + afirmacao8 + afirmacao19 + afirmacao25 + afirmacao26;
+            var pontuacaoAmarelo = afirmacao12 + afirmacao13 + afirmacao24 + afirmacao29 + afirmacao30;
+            var pontuacaoAzul = afirmacao5 + afirmacao6 + afirmacao9 + afirmacao14 + afirmacao15;
+            var pontuacaoSemCor = afirmacao10 + afirmacao11 + afirmacao20 + afirmacao27 + afirmacao28;
 
-        function calcularResultado() {
-            // Calcule os resultados com base nas respostas e armazene em respostas
-            for (let i = 1; i <= 3; i++) {
-                let pontuacao = parseInt(document.querySelector(`input[name=q${i}]:checked`).value);
-                respostas.cinza += pontuacao;
+            var resultadoCinza = "";
+            var resultadoRosa = "";
+            var resultadoVerde = "";
+            var resultadoAmarelo = "";
+            var resultadoAzul = "";
+            var resultadoSemCor = "";
+
+            // Pontuação Cinza (Sono)
+            if (pontuacaoCinza <= 10) {
+                resultadoCinza = "Em relação ao sono, sua pontuação foi: " + pontuacaoCinza + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoCinza <= 20) {
+                resultadoCinza = "Em relação ao sono, sua pontuação foi: " + pontuacaoCinza + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoCinza = "Em relação ao sono, sua pontuação foi: " + pontuacaoCinza + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
-            // Exibindo os resultados na tela
-            document.getElementById('pontuacaoCinza').textContent = respostas.cinza + ' pontos';
+            // Pontuação Rosa (Relacionamentos)
+            if (pontuacaoRosa <= 10) {
+                resultadoRosa = "Em relação aos relacionamentos, sua pontuação foi: " + pontuacaoRosa + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoRosa <= 20) {
+                resultadoRosa = "Em relação aos relacionamentos, sua pontuação foi: " + pontuacaoRosa + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoRosa = "Em relação aos relacionamentos, sua pontuação foi: " + pontuacaoRosa + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+            }
 
-            mostrarTela('tela05');
+            // Pontuação Verde (Sintomas depressivos)
+            if (pontuacaoVerde <= 10) {
+                resultadoVerde = "Em relação a sintomas depressivos , sua pontuação foi: " + pontuacaoVerde + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoVerde <= 20) {
+                resultadoVerde = "Em relação a sintomas depressivos, sua pontuação foi: " + pontuacaoVerde + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoVerde = "Em relação a sintomas depressivos, sua pontuação foi: " + pontuacaoVerde + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+            }
+
+            // Pontuação Amarelo (Sintomas de ansiedade)
+            if (pontuacaoAmarelo <= 10) {
+                resultadoAmarelo = "Em relação a sintomas de ansiedade, sua pontuação foi: " + pontuacaoAmarelo + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoAmarelo <= 20) {
+                resultadoAmarelo = "Em relação a sintomas de ansiedade, sua pontuação foi: " + pontuacaoAmarelo + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoAmarelo = "Em relação a sintomas de ansiedade, sua pontuação foi: " + pontuacaoAmarelo + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+            }
+
+            // Pontuação Azul (Memória)
+            if (pontuacaoAzul <= 10) {
+                resultadoAzul = "Em relação a memória, sua pontuação foi: " + pontuacaoAzul + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoAzul <= 20) {
+                resultadoAzul = "Em relação a memória, sua pontuação foi: " + pontuacaoAzul + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoAzul = "Em relação a memória, sua pontuação foi: " + pontuacaoAzul + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+            }
+
+            // Pontuação SemCor (Foco, atenção e concentração)
+            if (pontuacaoSemCor <= 10) {
+                resultadoSemCor = "Em relação ao foco, atenção e concentração, sua pontuação foi: " + pontuacaoSemCor + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+            } else if (pontuacaoSemCor <= 20) {
+                resultadoSemCor = "Em relação ao foco, atenção e concentração, sua pontuação foi: " + pontuacaoSemCor + " - É um item que pode ser melhorado para sua melhor performance.";
+            } else {
+                resultadoSemCor = "Em relação ao foco, atenção e concentração, sua pontuação foi: " + pontuacaoSemCor + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+            }
+
+            document.getElementById("resultadoCinza").textContent = resultadoCinza;
+            document.getElementById("resultadoRosa").textContent = resultadoRosa;
+            document.getElementById("resultadoVerde").textContent = resultadoVerde;
+            document.getElementById("resultadoAmarelo").textContent = resultadoAmarelo;
+            document.getElementById("resultadoAzul").textContent = resultadoAzul;            
+            document.getElementById("resultadoSemCor").textContent = resultadoSemCor;
         }
-
-        mostrarTela('tela01');
     </script>
 </body>
 </html>
