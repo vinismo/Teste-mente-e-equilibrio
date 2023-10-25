@@ -38,17 +38,17 @@ form {
 
 /* Estilo para os rótulos das afirmações */
 label {
-    margin-bottom: 10px;
+    margin: 10px 10px 10px 0px;
     font-weight: bold;
-    margin-top: 10px;
-    text-align: left;
+    text-align: right;
 }
 
 /* Estilo para os botões de opção */
 input[type="radio"] {
-    text-align: left;
-    margin-left: 25px;
-    margin-top: 0px;
+    
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -81,3 +81,45 @@ button:hover {
 
 /* Estilos para as diferentes categorias de resultados */
 
+
+#resultadoCinza {
+    background-color: gray; /* Cor de fundo cinza */
+    color: white;
+    padding: 10px; /* Espaçamento interno para o texto */
+    display: inline-block; /* Faz o retângulo se ajustar ao conteúdo */
+}
+
+#resultadoRosa {
+    background-color: rgb(255, 87, 196); /* Cor de fundo rosa */
+    color: black;
+    padding: 10px;
+    display: inline-block;
+}
+
+#resultadoVerde {
+    background-color: green; /* Cor de fundo verde */
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+#resultadoAmarelo {
+    background-color: yellow; /* Cor de fundo amarelo */
+    color: black;
+    padding: 10px;
+    display: inline-block;
+}
+
+#resultadoAzul {
+    background-color: blue; /* Cor de fundo azul */
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+#resultadoSemCor {
+    /* Sem cor de fundo */
+    color: black;
+    padding: 10px;
+    display: inline-block;
+}
