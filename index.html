@@ -323,7 +323,7 @@
 
         <label for="afirmacao29">29 - Tenho ansiedade relativamente constante: </label>
         <br>
-        <label htmlFor="afirmacao29"><input type="radio" id="afirmacao29" name="afirmacao29" value="0" required> 0 </label>
+        <label htmlFor="afirmacao29"><input type="radio" id="afirmacao29" name="afirmacao29" value="0" required > 0 </label>
         <label htmlFor="afirmacao29"><input type="radio" id="afirmacao29" name="afirmacao29" value="1"> 1 </label>
         <label htmlFor="afirmacao29"><input type="radio" id="afirmacao29" name="afirmacao29" value="2"> 2 </label>
         <label htmlFor="afirmacao29"><input type="radio" id="afirmacao29" name="afirmacao29" value="3"> 3 </label>
@@ -349,12 +349,25 @@
     </form>
 
     <h2>Resultados</h2>
-    <p id="resultadoCinza"></p>
-    <p id="resultadoRosa"></p>
-    <p id="resultadoVerde"></p>
-    <p id="resultadoAmarelo"></p>
-    <p id="resultadoAzul"></p>
-    <p id="resultadoSemCor"></p>
+
+    <div class="resultado">
+        <p id="resultadoCinza"></p>
+    </div>
+    <div class="resultado">
+        <p id="resultadoRosa"></p>
+    </div>
+    <div class="resultado">
+        <p id="resultadoVerde"></p>
+    </div>
+    <div class="resultado">
+        <p id="resultadoAmarelo"></p>
+    </div>
+    <div class="resultado">
+        <p id="resultadoAzul"></p>
+    </div>
+    <div class="resultado">
+        <p id="resultadoSemCor"></p>
+    </div>
 
 
     <script>
@@ -405,67 +418,81 @@
             var resultadoAzul = "";
             var resultadoSemCor = "";
 
+
             // Pontuação Cinza (Sono)
             if (pontuacaoCinza <= 10) {
-                resultadoCinza = "Sono, seu resultado é: " + pontuacaoCinza + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoCinza = "Sono <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoCinza <= 20) {
-                resultadoCinza = "Sono, seu resultado é: " + pontuacaoCinza + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoCinza = "Sono <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoCinza = "Sono, seu resultado é: " + pontuacaoCinza + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoCinza = "Sono <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             // Pontuação Rosa (Relacionamentos)
             if (pontuacaoRosa <= 10) {
-                resultadoRosa = "Relacionamentos, seu resultado é: " + pontuacaoRosa + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoRosa = "Relacionamentos <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoRosa <= 20) {
-                resultadoRosa = "Relacionamentos, seu resultado é: " + pontuacaoRosa + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoRosa = "Relacionamentos <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoRosa = "Relacionamentos, seu resultado é: " + pontuacaoRosa + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoRosa = "Relacionamentos <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             // Pontuação Verde (Sintomas depressivos)
             if (pontuacaoVerde <= 10) {
-                resultadoVerde = "Sintomas depressivos , seu resultado é: " + pontuacaoVerde + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoVerde = "Sintomas depressivos <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoVerde <= 20) {
-                resultadoVerde = "Sintomas depressivos, seu resultado é: " + pontuacaoVerde + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoVerde = "Sintomas depressivos <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoVerde = "Sintomas depressivos, seu resultado é: " + pontuacaoVerde + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoVerde = "Sintomas depressivos <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             // Pontuação Amarelo (Sintomas de ansiedade)
             if (pontuacaoAmarelo <= 10) {
-                resultadoAmarelo = "Sintomas de ansiedade, seu resultado é: " + pontuacaoAmarelo + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoAmarelo = "Sintomas de ansiedade <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoAmarelo <= 20) {
-                resultadoAmarelo = "Sintomas de ansiedade, seu resultado é: " + pontuacaoAmarelo + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoAmarelo = "Sintomas de ansiedade <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoAmarelo = "Sintomas de ansiedade, seu resultado é: " + pontuacaoAmarelo + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoAmarelo = "Sintomas de ansiedade <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             // Pontuação Azul (Memória)
             if (pontuacaoAzul <= 10) {
-                resultadoAzul = "Memória, seu resultado é: " + pontuacaoAzul + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoAzul = "Memória <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoAzul <= 20) {
-                resultadoAzul = "Memória, seu resultado é: " + pontuacaoAzul + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoAzul = "Memória <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoAzul = "Memória, seu resultado é: " + pontuacaoAzul + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoAzul = "Memória <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             // Pontuação SemCor (Foco, atenção e concentração)
             if (pontuacaoSemCor <= 10) {
-                resultadoSemCor = "Foco, atenção e concentração, seu resultado é: " + pontuacaoSemCor + " - Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
+                resultadoSemCor = "Foco, atenção e concentração <span class='quadrado-verde'></span> Apesar de sempre termos pontos de melhoria, você está com esse item equilibrado.";
             } else if (pontuacaoSemCor <= 20) {
-                resultadoSemCor = "Foco, atenção e concentração, seu resultado é: " + pontuacaoSemCor + " - É um item que pode ser melhorado para sua melhor performance.";
+                resultadoSemCor = "Foco, atenção e concentração <span class='quadrado-amarelo'></span> É um item que pode ser melhorado para sua melhor performance.";
             } else {
-                resultadoSemCor = "Foco, atenção e concentração, seu resultado é: " + pontuacaoSemCor + " - Sugere-se procurar ajuda para melhorar esse aspecto.";
+                resultadoSemCor = "Foco, atenção e concentração <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
             document.getElementById("resultadoCinza").textContent = resultadoCinza;
+            document.getElementById("resultadoCinza").innerHTML = resultadoCinza;
+
             document.getElementById("resultadoRosa").textContent = resultadoRosa;
+            document.getElementById("resultadoRosa").innerHTML = resultadoRosa;
+
             document.getElementById("resultadoVerde").textContent = resultadoVerde;
+            document.getElementById("resultadoVerde").innerHTML = resultadoVerde;
+
             document.getElementById("resultadoAmarelo").textContent = resultadoAmarelo;
-            document.getElementById("resultadoAzul").textContent = resultadoAzul;            
+            document.getElementById("resultadoAmarelo").innerHTML = resultadoAmarelo;
+
+            document.getElementById("resultadoAzul").textContent = resultadoAzul;
+            document.getElementById("resultadoAzul").innerHTML = resultadoAzul;            
+            
             document.getElementById("resultadoSemCor").textContent = resultadoSemCor;
+            document.getElementById("resultadoSemCor").innerHTML = resultadoSemCor;
         }
     </script>
 </body>
 </html>
+
+
