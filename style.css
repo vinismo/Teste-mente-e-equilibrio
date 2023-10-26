@@ -77,49 +77,29 @@ button:hover {
     margin-top: 20px;
     padding: 10px;
     border-radius: 5px;
+    text-align: center;
 }
 
-/* Estilos para as diferentes categorias de resultados */
-
-
-#resultadoCinza {
-    background-color: gray; /* Cor de fundo cinza */
-    color: white;
-    padding: 10px; /* Espaçamento interno para o texto */
-    display: inline-block; /* Faz o retângulo se ajustar ao conteúdo */
-}
-
-#resultadoRosa {
-    background-color: rgb(255, 87, 196); /* Cor de fundo rosa */
-    color: black;
-    padding: 10px;
+.quadrado-verde {
+    width: 25px;
+    height: 20px;
     display: inline-block;
+    background-color: green; /* Cor verde, você pode ajustar conforme necessário */
+    margin-top: 5px;
 }
 
-#resultadoVerde {
-    background-color: green; /* Cor de fundo verde */
-    color: white;
-    padding: 10px;
+.quadrado-amarelo {
+    width: 25px;
+    height: 20px;
     display: inline-block;
+    background-color: yellow; /* Cor amarela, você pode ajustar conforme necessário */
+    margin-top: 5px;
 }
 
-#resultadoAmarelo {
-    background-color: yellow; /* Cor de fundo amarelo */
-    color: black;
-    padding: 10px;
+.quadrado-vermelho {
+    width: 25px;
+    height: 20px;
     display: inline-block;
-}
-
-#resultadoAzul {
-    background-color: blue; /* Cor de fundo azul */
-    color: white;
-    padding: 10px;
-    display: inline-block;
-}
-
-#resultadoSemCor {
-    /* Sem cor de fundo */
-    color: black;
-    padding: 10px;
-    display: inline-block;
+    background-color: red; /* Cor vermelha, você pode ajustar conforme necessário */
+    margin-top: 5px;
 }
