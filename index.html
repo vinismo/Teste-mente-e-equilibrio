@@ -344,13 +344,14 @@
         <br>
 
 
-        <button type="button" onclick="calcularPontuacao()">Calcular Pontuação</button>
+        <button type="button" onclick="calcularPontuacao().esconderFrase()">Calcular Pontuação</button>
+        <p id="mensagemErro" style="color: red;">Responda todas as afirmações</p>
 
     </form>
 
     <h2>Resultados</h2>
 
-    <p id="mensagemErro" style="color: red;">Responda todas as afirmações</p>
+    <!-- <p id="mensagemErro" style="color: red;">Responda todas as afirmações</p> -->
 
     <div class="resultado">
         <p id="resultadoCinza"></p>
@@ -369,6 +370,9 @@
     </div>
     <div class="resultado">
         <p id="resultadoSemCor"></p>
+    </div>
+    <div class="mensagem_final">
+        <p id="mensagem_final"></p>
     </div>
 
 
@@ -419,6 +423,7 @@
             var resultadoAmarelo = "";
             var resultadoAzul = "";
             var resultadoSemCor = "";
+            var mensagem_final = "Muito bem! Agora que você já se conheceu um pouco, vamos buscar melhoria nos pontos sinalizados? Me procure para que possa te direcionar para a alta performance!"
 
 
             // Pontuação Cinza (Sono)
@@ -475,6 +480,13 @@
                 resultadoSemCor = "Foco, atenção e concentração <span class='quadrado-vermelho'></span> Sugere-se procurar ajuda para melhorar esse aspecto.";
             }
 
+        //escon
+        function esconderFrase() {
+            var frase = document.getElementById('mensagemErro');
+            frase.style.display = 'none';
+        }
+
+
             document.getElementById("resultadoCinza").textContent = resultadoCinza;
             document.getElementById("resultadoCinza").innerHTML = resultadoCinza;
 
@@ -492,6 +504,8 @@
             
             document.getElementById("resultadoSemCor").textContent = resultadoSemCor;
             document.getElementById("resultadoSemCor").innerHTML = resultadoSemCor;
+
+            document.getElementById("mensagem_final").textContent = mensagem_final;
         }
     </script>
 </body>
