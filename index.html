@@ -344,7 +344,7 @@
         <br>
 
 
-        <button type="button" onclick="calcularPontuacao().esconderFrase()">Calcular Pontuação</button>
+        <button type="button" onclick="calcularPontuacao()">Calcular Pontuação</button>
         <p id="mensagemErro" style="color: red;">Responda todas as afirmações</p>
 
     </form>
@@ -371,8 +371,8 @@
     <div class="resultado">
         <p id="resultadoSemCor"></p>
     </div>
-    <div class="mensagem_final">
-        <p id="mensagem_final"></p>
+    <div class="mensagemFinal">
+        <p id="mensagemFinal"></p>
     </div>
 
 
@@ -423,7 +423,7 @@
             var resultadoAmarelo = "";
             var resultadoAzul = "";
             var resultadoSemCor = "";
-            var mensagem_final = "Muito bem! Agora que você já se conheceu um pouco, vamos buscar melhoria nos pontos sinalizados? Me procure para que possa te direcionar para a alta performance!"
+            var mensagemFinal = "Muito bem! Agora que você já se conheceu um pouco, vamos buscar melhoria nos pontos sinalizados? Me procure para que possa te direcionar para a alta performance!"
 
 
             // Pontuação Cinza (Sono)
@@ -505,10 +505,8 @@
             document.getElementById("resultadoSemCor").textContent = resultadoSemCor;
             document.getElementById("resultadoSemCor").innerHTML = resultadoSemCor;
 
-            document.getElementById("mensagem_final").textContent = mensagem_final;
+            document.getElementById("mensagemFinal").textContent = mensagemFinal;
         }
     </script>
 </body>
 </html>
-
-
