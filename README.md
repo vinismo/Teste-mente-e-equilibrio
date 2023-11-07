@@ -14,7 +14,7 @@ Com base na soma das respostas, três mensagens diferentes poderão ser exibidas
 
 Foi adicionada uma validação para alertar o usuário caso ele não tenha respondido todas as afirmações, exibindo a mensagem na tela: "Por favor, responda a todas as questões".
 
-Link para acessar o teste: https://menteequilibrio.netlify.app/
+Link para acessar o teste: https://menteequilibrio.netlify.app/ 
 
 Imagem do início do teste:
 <img src="inicio.png">
